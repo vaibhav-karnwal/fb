@@ -1,17 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook - log in or sign up</title>
 <style>
 body{
     height: 100%;
 	background-color:#f0f2f5;
     font-family:Helvetica, Arial, sans-serif;
 }
-.home{
+.form{
     margin:10% 20%;
     float: center;
 }
-.login{
+.form-login{
     box-sizing: border-box;
     width: 40%;
     color: rgb(0, 0, 0);
@@ -34,7 +39,7 @@ input{
     font-size: 20px;
     padding: 15px;
     outline: none !important;
-    border:1px solid #9a9b9c;
+    border:1px solid #dddfe2;
     border-radius: 5px;
     width: 89%;
 }
@@ -43,7 +48,7 @@ input:focus {
     border:1px solid #1877f2;
     box-shadow: 0 0 10px #719ECE;
 }
-.main{
+.form-main{
     margin-top:5%;
     float:left;
     height: 40%;
@@ -74,25 +79,30 @@ button[type="submit"]{
     width: 97%;
     color:white;
 }
+.primary{
+    background-color:#42b72a;
+    border-radius: 5px;
+    padding: 10px;
+    border:none;
+}
 button{
     outline: none !important;
     font-size: 20px;
-    border:none;
-    border-radius: 5px;
-    padding: 10px;
-    background-color:#42b72a;
+}
+button a{
     color:white;
 }
 hr{
     width: 100%;
+    color:#dddfe2;
 }
 .hidden{
     visibility: hidden;
 }
-.main p{
+.form-main p{
     font-size: 25px;
 }
-.login p{
+.form-login p{
     margin: none;
     font-size: 15px;
 }
@@ -110,6 +120,11 @@ a:hover, .login .card p:hover{
 }
 #forget{ 
     color: #1877f2;
+}
+.btn-plus{
+    width: 20px 30px;
+    text-align: center;
+    border: 1 solid #9a9b9c;
 }
 ul {
   list-style-type: none;
@@ -130,22 +145,22 @@ li a {
 </style>
 </head>
 <body>
-    <section class="home">
-        <div class="main">
-            <h1>facebook</h1>
+    <section class="form">
+        <div class="form-main">
+            <img src="facebook.png" alt="logo">
             <p>Facebook helps you cannext and share with the people in your life.</p>
         </div>
-        <div class="login">
+        <div class="form-login">
             <div class="card">
                 <input type="email" id="email" placeholder="Email address or phone number"/><br/>
                 <input type="password" id="password" placeholder="Password"/><br/>
                 <button type="submit">Log In</button><br/>
-                <p><a id="forget" href="https://www.facebook.com/login/identify/?ctx=recover&ars=facebook_login&from_login_screen=0">Forgotten password?></p>
+                <p><a id="forget" href="https://www.facebook.com/login/identify/?ctx=recover&ars=facebook_login&from_login_screen=0">Forgotten password?</p>
                 <hr><br/>
-                <button >Create New Account</button><br/>
+                <button class="primary"><a href="https://www.facebook.com/r.php">Create New Account</a></button><br/>
             </div>
             <div>
-                <p><strong><a id="register" href="https://www.facebook.com/pages/create/?ref_type=registration_form">Create a Page> </strong>for a celebrity, brand or business.</p>
+                <p><strong><a id="register" href="https://www.facebook.com/pages/create/?ref_type=registration_form">Create a Page </strong>for a celebrity, brand or business.</p>
             </div>
         </div>
     </section>
@@ -164,6 +179,7 @@ li a {
                 <li><a href="">    తెలుగు</a></li>
                 <li><a href="">    മലയാളം</a></li>
                 <li><a href="">    ಕನ್ನಡ</a></li>
+                <button class="btn-plus"> + </button>
                 <hr>
                 <li><a href="">SignUp</a></li>
                 <li><a href="">LogIn</a></li>
